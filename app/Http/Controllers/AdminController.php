@@ -37,7 +37,7 @@ class AdminController extends Controller
         );
 
         if (Auth::guard('admin')->attempt($creds)){
-            return redirect()->route('admin.auth.home');
+            return redirect()->route('admin.home');
         } else {
             session()->flash('fail', 'Incorrect credentials');
             return redirect()->route('admin.login');
