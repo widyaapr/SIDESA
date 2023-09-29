@@ -33,14 +33,20 @@ class AdminController extends Controller
 
         $creds = array(
             $fieldType => $request->login_id,
-            'password'=> $request->password->password
+            'password'=> $request->password
         );
 
         if (Auth::guard('admin')->attempt($creds)){
-            return redirect()->route('admin.home');
+            return redirect()->route('admin.auth.home');
         } else {
             session()->flash('fail', 'Incorrect credentials');
             return redirect()->route('admin.login');
         } 
+    }
+
+    public function logoutHandler (Request $request ){
+        Auth::guard('admin')->logout();
+        session()->flash('fail', 'You are logout out');
+        return redirect()->route('admin.login');
     }
 }
