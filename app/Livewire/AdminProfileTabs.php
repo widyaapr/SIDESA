@@ -33,7 +33,7 @@ class AdminProfileTabs extends Component
     public function updateAdminPersonalDetails()
     {
         $this->validate([
-            'name' => 'required|min:5',
+            'name' => 'required|min:6',
             'email' => 'required|email|unique:admins,email,' . $this->admin_id,
             'nik' => 'required|min:3|unique:admins,nik,' . $this->admin_id
         ]);
