@@ -1,21 +1,24 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 
 class AdminWargaHeaderProfileInfo extends Component
- {
+{
     public $admin;
     public $warga;
+
+
     public $listerners = [
-        'updateAdminWargaHeaderProfileInfo' => '$refresh'
+        'updateAdminWargaHeaderInfo' => '$refresh'
     ];
 
-    public function mounth(){
-        if (Auth::guard('admin')->check()){
+    public function mount()
+    {
+        if (Auth::guard('admin')->check()) {
             $this->admin = Admin::findOrFail(auth()->id());
         }
     }

@@ -9,9 +9,9 @@
                 data-toggle="dropdown"
             >
                 <span class="user-icon">
-                    <img src="{{ $admin->picture }}" alt="" />
+                    <img src="{{ $admin->picture }}" alt=""  />
                 </span>
-                <span class="{{ $admin->name )}}"></span>
+                <span class="user-name">{{ $admin->name }}</span>
             </a>
             <div
                 class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"

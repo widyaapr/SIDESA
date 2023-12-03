@@ -45,7 +45,7 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="/back/vendors/styles/style.css" />
 
-		
+
 		<script>
 			(function (w, d, s, l, i) {
 				w[l] = w[l] || [];
@@ -64,7 +64,7 @@
         @stack('stylesheets')
 	</head>
 	<body>
-		
+
 		<div class="header">
 			<div class="header-left">
 				<div class="menu-icon bi bi-list"></div>
@@ -223,9 +223,9 @@
 					</div>
 				</div>
 
-			
+
 				@livewire('admin-warga-header-profile-info');
-				
+
 
 
 				<div class="github-link">
@@ -443,10 +443,10 @@
 							</a>
 						</li>
 						@else
-							
+
 						@endif
-					
-				
+
+
 					</ul>
 				</div>
 			</div>
@@ -456,7 +456,7 @@
 		<div class="main-container">
 			<div class="pd-ltr-20 xs-pd-20-10">
 				<div class="min-height-200px">
-					
+
 					<div>
                         @yield('content')
                     </div>
@@ -469,7 +469,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- js -->
 		<script src="/back/vendors/scripts/core.js"></script>
 		<script src="/back/vendors/scripts/script.min.js"></script>
@@ -485,15 +485,15 @@
 		</script>
 		<script src="/extra-assets/ijabo/ijabo.js"></script>
 		<script src="/extra-assets/ijabo/jquery-1.7.1.min.js"></script>
-		<script>	
+		<script>
 		window.addEventListener('showToastr', function(event){
 				toastr.remove();
 				if(event.detail.type === 'info') {toastr.info(event.detail.message);}
-				else if(event.detail.type === 'success'){ toastr.success(event.detail.message);}
+				else if(event.detail.type === 'success'){toastr.success(event.detail.message);}
 				else if(event.detail.type === 'error'){toastr.error(event.detail.message);}
 				else if(event.detail.type === 'warning'){toastr.warning(event.detail.message);}
 				else {return false;}
-			}); 
+			});
 		</script>
 		@livewireScripts
 		@stack('scripts')
